@@ -1,17 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PostCardStyle } from "./styles";
 
 export default function PostCard({ post }) {
-  const {
-    title,
-    slug,
-    thumbnail,
-    author,
-    categories,
-    postContent,
-  } = post.fields;
+  const { title, slug, thumbnail, author, categories } = post.fields;
   return (
-    <div className="card">
+    <PostCardStyle>
       <div className="thumbnail">
         <Image
           src={`https:${thumbnail.fields.file.url}`}
@@ -24,12 +18,11 @@ export default function PostCard({ post }) {
           <h2>{title}</h2>
           <p>By {author}</p>
           <span>{categories}</span>
-          {/* <p>{postContent}</p> */}
           <div className="actions">
             <Link href={`/posts/${slug}`}>Read more</Link>
           </div>
         </div>
       </div>
-    </div>
+    </PostCardStyle>
   );
 }
