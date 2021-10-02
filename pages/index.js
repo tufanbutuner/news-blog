@@ -1,4 +1,4 @@
-import PostCard from "../components/molecules/PostCard";
+import PostCard from "../components/molecules/PostCard/PostCard";
 import { createClient } from "contentful";
 
 export async function getStaticProps() {
