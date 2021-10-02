@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function PostCard({ post }) {
@@ -11,7 +12,13 @@ export default function PostCard({ post }) {
   } = post.fields;
   return (
     <div className="card">
-      <div className="thumbnail"></div>
+      <div className="thumbnail">
+        <Image
+          src={`https:${thumbnail.fields.file.url}`}
+          width={thumbnail.fields.file.details.image.width}
+          height={thumbnail.fields.file.details.image.height}
+        />
+      </div>
       <div className="content-info">
         <div className="info">
           <h2>{title}</h2>
