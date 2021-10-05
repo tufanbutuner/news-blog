@@ -1,5 +1,16 @@
+import { BlogPostsList } from "../components/molecules/PostCard/styles";
 import PostCard from "../components/molecules/PostCard/PostCard";
 import { createClient } from "contentful";
+
+export default function Recipes({ posts }) {
+  return (
+    <BlogPostsList>
+      {posts.map((post) => (
+        <PostCard key={post.sys.id} post={post} />
+      ))}
+    </BlogPostsList>
+  );
+}
 
 export async function getStaticProps() {
   const client = createClient({
@@ -14,15 +25,4 @@ export async function getStaticProps() {
       posts: res.items,
     },
   };
-}
-
-export default function Recipes({ posts }) {
-  console.log(posts);
-  return (
-    <div className="recipe-list">
-      {posts.map((post) => (
-        <PostCard key={post.sys.id} post={post} />
-      ))}
-    </div>
-  );
 }
