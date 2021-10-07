@@ -10,7 +10,7 @@ export default function Layout({ children }) {
               <span>Tufan's</span>
               <span>MMA BLOG</span>
             </h1>
-            <h2>Next.js is pretty cool</h2>
+            <h2>Made with Next.js and Contentful</h2>
           </a>
         </Link>
       </header>
