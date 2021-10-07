@@ -25,6 +25,17 @@ export const PostCardStyle = styled.div`
     margin-top: 6px;
     font-size: 1.25rem;
   }
+
+  img {
+    margin: auto;
+  }
+
+  span {
+    background: yellow;
+    border-radius: 25px;
+    padding: 6px;
+    font-size: 0.6rem;
+  }
 `;
 PostCardStyle.displayName = "PostCardStyle";
 

@@ -17,6 +17,11 @@ export default function PostCard({ post }) {
 
         <h3>{title}</h3>
         <p>{author}</p>
+        <div className="tag-list">
+          {categories.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
         <span>{categories}</span>
         <div className="actions">
           <Link href={`/posts/${slug}`}>Read more</Link>
