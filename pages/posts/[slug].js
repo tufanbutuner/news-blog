@@ -1,7 +1,3 @@
 export default function RecipeDetails() {
-  return (
-    <div>
-      Recipe Details
-    </div>
-  )
+  return <div>Individual post page coming soon...</div>;
 }
