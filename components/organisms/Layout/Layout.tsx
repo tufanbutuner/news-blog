@@ -7,8 +7,7 @@ export default function Layout({ children }) {
         <Link href="/">
           <a>
             <h1>
-              <span>Tufan's</span>
-              <span>MMA BLOG</span>
+              <span>Tufan's MMA BLOG</span>
             </h1>
             <h2>Made with Next.js and Contentful</h2>
           </a>
