@@ -1,4 +1,4 @@
-import { ContentInfo, PostCardStyle } from "./styles";
+import { ContentInfo, ImageStyle, PostCardStyle, ReadMore } from "./styles";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,7 @@ export default function PostCard({ post }) {
   return (
     <PostCardStyle>
       <ContentInfo>
-        <Image
+        <ImageStyle
           src={`https:${thumbnail.fields.file.url}`}
           width={thumbnail.fields.file.details.image.width}
           height={thumbnail.fields.file.details.image.height}
@@ -23,9 +23,11 @@ export default function PostCard({ post }) {
           ))}
         </div>
         <span>{categories}</span>
-        <div className="actions">
-          <Link href={`/posts/${slug}`}>Read more</Link>
-        </div>
+        <ReadMore>
+          <Link className="read-more" href={`/posts/${slug}`}>
+            Read more
+          </Link>
+        </ReadMore>
       </ContentInfo>
     </PostCardStyle>
   );

@@ -1,4 +1,5 @@
 import Image from "./PostCard";
+import Link from "next/dist/client/link";
 import styled from "styled-components";
 
 export const PostCardStyle = styled.div`
@@ -15,6 +16,10 @@ export const PostCardStyle = styled.div`
   }
 
   h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     margin-top: 10px;
     margin-bottom: 6px;
     color: #fff;
@@ -26,18 +31,24 @@ export const PostCardStyle = styled.div`
     font-size: 1.25rem;
   }
 
-  img {
-    margin: auto;
-  }
-
   span {
     background: yellow;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 6px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    margin-left: 4px;
   }
 `;
 PostCardStyle.displayName = "PostCardStyle";
+
+export const ImageStyle = styled.img`
+  margin: auto;
+  object-fit: cover;
+  border-radius: 25px;
+  max-height: 260px;
+  width: calc(100% - 0px);
+`;
+ImageStyle.displayName = "ImageStyle";
 
 export const BlogPostsList = styled.div`
   display: grid;
@@ -49,9 +60,10 @@ BlogPostsList.displayName = "BlogPostsList";
 export const ContentInfo = styled.div`
   padding: 10px;
   margin: auto;
-
-  img {
-    border-radius: 25px;
-  }
 `;
 ContentInfo.displayName = "ContentInfo";
+
+export const ReadMore = styled.div`
+  display: flex;
+`;
+ReadMore.displayName = "ReadMore";
