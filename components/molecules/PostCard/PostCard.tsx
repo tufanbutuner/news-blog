@@ -24,9 +24,7 @@ export default function PostCard({ post }) {
         </div>
         <span>{categories}</span>
         <ReadMore>
-          <Link className="read-more" href={`/posts/${slug}`}>
-            Read more
-          </Link>
+          <Link href={`/posts/${slug}`}>Read more</Link>
         </ReadMore>
       </ContentInfo>
     </PostCardStyle>
