@@ -45,7 +45,7 @@ export default function PostDetails({ post }) {
     categories,
     postContent,
   } = post.fields;
-  console.log(post);
+  // console.log(post);
   return (
     <div className="banner">
       <Image

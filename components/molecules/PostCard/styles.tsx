@@ -59,11 +59,12 @@ BlogPostsList.displayName = "BlogPostsList";
 
 export const ContentInfo = styled.div`
   padding: 10px;
-  margin: auto;
 `;
 ContentInfo.displayName = "ContentInfo";
 
 export const ReadMore = styled.div`
   display: flex;
+  margin-top: 12px;
+  margin-left: 8px;
 `;
 ReadMore.displayName = "ReadMore";

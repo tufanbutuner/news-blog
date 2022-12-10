@@ -22,7 +22,6 @@ export default function PostCard({ post }) {
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <span>{categories}</span>
         <ReadMore>
           <Link href={`/posts/${slug}`}>Read more</Link>
         </ReadMore>

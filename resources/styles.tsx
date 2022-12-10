@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 body {
-  background: #f0a500;
+  background: #fff;
   margin: 0;
-  font-family: "Inter";
-  font-size: 1.5em;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1em;
 }
 .layout {
   min-height: 100vh;

@@ -7,9 +7,9 @@ export default function Layout({ children }) {
         <Link href="/">
           <a>
             <h1>
-              <span>Tufan's MMA BLOG</span>
+              <span>Bok Sports</span>
             </h1>
-            <h2>Made with Next.js and Contentful</h2>
+            <h2>Daily dose of Sports</h2>
           </a>
         </Link>
       </header>
@@ -17,7 +17,7 @@ export default function Layout({ children }) {
       <div className="page-content">{children}</div>
 
       <footer>
-        <p>&copy; 2021 MMA Blog</p>
+        <p>2022 &copy; Tufan Butuner</p>
       </footer>
     </div>
   );
