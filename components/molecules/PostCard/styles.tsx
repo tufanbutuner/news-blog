@@ -54,6 +54,11 @@ export const BlogPostsList = styled.div`
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 30px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 BlogPostsList.displayName = "BlogPostsList";
 
